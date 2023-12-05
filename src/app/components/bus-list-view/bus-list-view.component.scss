@@ -1,0 +1,73 @@
+.bus-seats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px; /* Adjust width to fit the seats */
+  }
+  
+  // .seat {
+  //   width: 20px;
+  //   height: 20px;
+  //   background-color: red; /* Default seat color */
+  //   border: 1px solid #000;
+  //   margin: 5px;
+  //   cursor: pointer;
+  // }
+  
+  // .seat.active {
+  //   background-color: green; /* Selected seat color */
+  // }
+  
+
+  .selected-seat {
+    /* Apply green color or any other desired styles */
+    background-color: green;
+    border: 2px solid red;
+    
+    /* Additional styling for the selected seat */
+    /* Add any other styles you want to apply when a seat is selected */
+  }
+
+
+  .seat {
+    position: relative;
+  }
+  
+  .seat .seat-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red
+  }
+
+
+  th {
+    margin-right: 30px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    padding :10px 10px;
+    // background-color: black;
+    // color:white
+  
+  }
+  td{
+    border: 1px solid #dee2e6;
+    text-align:center;
+    width:auto;
+    padding :10px 10px;
+  }
+  
+ 
+  table {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: none;
+    border: 2px solid #dee2e6;
+    // background-color: black;
+    // color:white;
+  }
+
+  h4{
+    font-family: italic;
+    color:red
+  }

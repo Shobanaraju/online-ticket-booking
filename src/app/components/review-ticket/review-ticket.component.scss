@@ -1,0 +1,42 @@
+// .card{
+//     padding: 20px;
+//     background-color: azure;
+//     width:50%;
+//     // text-align: center;
+//     margin-left: 25%;
+// }
+
+
+.heading{
+    font-size:larger;color:orangered;font-weight: bolder;font-size:20px;
+}
+
+th {
+    margin-right: 30px;
+    // border: 1px solid #dee2e6;
+    text-align: center;
+    padding:10px 10px;
+    // background-color: black;
+    // color:white
+  
+  }
+  td{
+    // border: 1px solid #dee2e6;
+    text-align:center;
+    width:auto;
+    padding:10px 10px
+  }
+  
+ 
+  table {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: none;
+    border: 2px solid #dee2e6;
+    // background-color: black;
+    // color:white;
+  }
+
+  #fontStyle{
+    font-family:Arial, Helvetica, sans-serif
+  }

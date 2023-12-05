@@ -1,0 +1,110 @@
+<br>
+
+<div class="container m-5 p-5" class="center" style="margin-left:30%;">
+  <br />
+  <div class="card">
+    <div class="card-body" style="margin-left:20px;">
+      <h4>User Information</h4>
+      <hr>
+      <br>
+     
+      <form [formGroup]="reactiveForm" (ngSubmit)="submit()">
+        
+        <div class="form-group example-header" class="col-md-6 mb-4">
+          <h5>User Name</h5>
+          <input
+            type="text"
+            id="form1Example1"
+            class="form-control form-control-lg"
+            placeholder="User Name"
+            formControlName="fullname"
+          />
+          <small
+            *ngIf="
+              reactiveForm.get('fullname')?.invalid &&
+              reactiveForm.get('fullname')?.touched
+            "
+            >Full name is required and must be a valid name</small
+          >
+          <!-- <span *ngIf="nameControl.invalid && (nameControl.dirty || nameControl.touched)"
+      class="alert"></span> -->
+
+          <label class="form-label" for="form3Example4"></label>
+        </div>
+
+        <div class="form-group example-header" class="col-md-6 mb-4">
+          <h5>User Mobile No</h5>
+          <input
+            type="text"
+            id="form5Example5"
+            class="form-control form-control-lg"
+            placeholder="User Mobile No"
+            formControlName="number"
+            minlength="10"
+            maxlength="10"
+          />
+          <small
+            *ngIf="
+              reactiveForm.get('number')?.touched &&
+              reactiveForm.get('number')?.hasError('required')
+            "
+            >Phone Number is required</small
+          >
+          <small
+            *ngIf="
+              reactiveForm.get('number')?.touched &&
+              reactiveForm.get('number')?.dirty &&
+              reactiveForm.get('number')?.hasError('pattern')
+            "
+          >
+            Phone number must be minimum 10 digits and maximum 12 digits in
+            number.
+          </small>
+
+          <label class="form-label" for="form3Example4"></label>
+        </div>
+
+        <div class="form-group example-header" class="col-md-6 mb-4">
+          <h5>Email</h5>
+
+          <input
+            type="email"
+            id="form2Example2"
+            class="form-control form-control-lg"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <!-- <small *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched" >Email is required</small> -->
+          <!-- <small  *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.value">Email is not valid</small> -->
+          <!-- <small *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.value !== ''">Email is not valid</small> -->
+
+          <small
+            *ngIf="
+              reactiveForm.get('email')?.touched &&
+              reactiveForm.get('email')?.hasError('required')
+            "
+            >Email is required</small
+          >
+          <small
+            *ngIf="
+              reactiveForm.get('email')?.touched &&
+              reactiveForm.get('email')?.hasError('email')
+            "
+            >Enter a valid email address</small
+          >
+
+          <label class="form-label" for="form3Example4"></label>
+        </div>
+
+        <br />
+        <div align="center">
+        <button  [disabled]="!reactiveForm.valid" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+      </form>
+      <br />
+      <br />
+    </div>
+  </div>
+</div>

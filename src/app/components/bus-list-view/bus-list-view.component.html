@@ -1,0 +1,146 @@
+<div class="container m-5 p-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Book Bus Ticket</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <h5>Seat Layout</h5>
+            </div>
+            <div class="card-body">
+              <div class="border border-dark m-5">
+               
+                <span *ngFor="let n of totalSeats">
+                  <!-- <span>&nbsp;&nbsp;</span> -->
+
+                  <button type="button" style="width: 30px; height: 30px">
+
+                    <span>
+                    <span >
+                    <div 
+                      class="seat"
+                      class="material-icons available-seat"
+                      [class.selected-seat]="isSelected(n)"
+                      (click)="toggleSeat(n)"
+                    >
+                      event_seat
+                    </div>
+                  </span>
+                </span>
+              
+
+                    <!-- <p *ngIf="!selected">Click to select seat</p> -->
+                  </button>
+
+                  <span *ngIf="n % 2 == 0 && !(n % 4 == 0)"
+                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+                  >
+                  <div *ngIf="n % 4 == 0"></div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="card mb-6 card-header">
+            <h5>Bus Information</h5>
+          </div>
+          <div class="card-body" >
+            <br>
+
+          
+            <div *ngIf="select">
+              <h4>------ Please select the seat --------</h4>
+            </div>
+            <!-- <div><span> Bus Name : &nbsp; {{ busList.busName }}</span></div>
+            <div>
+              <span *ngFor="let city of cityDetails">
+                <span  id="fontStyle" *ngIf="city.id == busList.leavingFrom"
+                  >From : &nbsp; {{ city.city }}
+                </span>
+              </span>
+            </div>
+
+            <span *ngFor="let city of cityDetails">
+              <span  id="fontStyle" *ngIf="city.id == busList.leavingTo"
+                >To : &nbsp; {{ city.city }}
+              </span>
+            </span>
+            <span  id="fontStyle">Departing Time : {{ busList.departingOn }}</span> <br>
+            <span  id="fontStyle"> Bus Fare : &nbsp; {{busList.busFare}}</span> <br> -->
+            <div *ngIf="show">
+            <table >
+              <thead>
+                <th>Seat</th>
+                <th>Fare</th>
+                <th>Class</th>
+                
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let seatArr of selectedSeats">
+              <tr>
+              <td>{{seatArr}}</td>
+              <td>{{busList.busFare}}</td>
+              <td>{{busList.class}}</td>
+            </tr>
+          </ng-container>
+          </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+  
+  
+  
+            <div>
+              <h2>Total Fare :  {{totalFare}} </h2>
+            </div>
+            <br>
+            <br>
+  
+            <div align="center">
+              <button class="btn btn-primary" routerLink="/submitForm/{{busList.id}}">Confirm</button>
+            </div>
+          </div>
+        </div>
+
+         
+
+          <!-- <span  id="fontStyle">Selected Seat: &nbsp; {{ selectSeat }}</span> -->
+
+         
+        </div>
+
+
+       
+
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <html>
+  <div class="bus-seats">
+    <div
+      class="seat"
+      class="material-icons available-seat"
+      (click)="toggleSeatColor(1)"
+    >
+      event_seat
+    </div>
+    <div class="seat" (click)="toggleSeatColor(2)"></div>
+    <div class="seat" (click)="toggleSeatColor(3)"></div>
+    <div class="seat" (click)="toggleSeatColor(4)"></div>
+    <div class="seat" (click)="toggleSeatColor(5)"></div>
+    <div class="seat" (click)="toggleSeatColor(6)"></div>
+    <div class="seat" (click)="toggleSeatColor(7)"></div>
+    <div class="seat" (click)="toggleSeatColor(8)"></div>
+    <div class="seat" (click)="toggleSeatColor(9)"></div>
+    <div class="seat" (click)="toggleSeatColor(10)"></div>
+  </div>
+</html> -->

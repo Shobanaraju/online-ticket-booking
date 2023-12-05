@@ -1,0 +1,48 @@
+th {
+    margin-right: 30px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    padding:10px 10px;
+    // background-color: black;
+    // color:white
+  
+  }
+  td{
+    border: 1px solid #dee2e6;
+    text-align:center;
+    width:auto;
+    padding : 10px 10px;
+  }
+  
+ 
+  table {
+    width: 80%;
+   
+    margin: 0 auto;
+    box-shadow: none;
+    border: 2px solid #dee2e6;
+    // background-color: black;
+    // color:white;
+  }
+
+  img{
+    max-width: 35%;
+    max-height: 35%;
+  }
+
+  small{
+    color:red
+}
+
+select.ng-touched.ng-invalid{
+  border:red solid 2px;
+}
+input.ng-touched.ng-invalid{
+  border:red solid 2px;
+}
+
+.card{
+  background-color:lightcyan;
+  width:75%;
+  margin-left:100px;
+}

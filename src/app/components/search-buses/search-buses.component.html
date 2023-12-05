@@ -1,0 +1,129 @@
+<br />
+<br />
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <br>
+        
+      <form [formGroup]="searchForm" (ngSubmit)="searchBus()">
+        <div class="row">
+          <div class="example-header col-md-6 form-group">
+            <!-- <h3>Leaving From</h3> -->
+            <h5>Leaving From</h5>
+            <select class="form-control" id="dropdownSelect" formControlName="leavingFrom">
+            
+          
+                <option value="">Select an option</option>
+                <option *ngFor="let option of cityDetails" [value]="option.id">{{ option.city }}</option>
+              </select>
+              <small
+              *ngIf="
+                searchForm.get('leavingFrom')?.touched &&
+                searchForm.get('leavingFrom')?.hasError('required')
+              "
+              >Leaving From is required</small
+            >
+            <!-- <input
+              type="text"
+              id="from"
+              formControlName="from"
+              placeholder="Leaving From"
+            /> -->
+            <br>
+            <br />
+          </div>
+          <div class="form-group example-header col-md-6 form-group">
+            <h5>Leaving To</h5>
+            <select class="form-control" id="dropdownSelect" formControlName="leavingTo">
+            <!-- (change)="toCitySelect($event)" -->
+          
+                <option value="">Select an option</option>
+                <option *ngFor="let option of cityDetails" [value]="option.id">{{ option.city }}</option>
+              </select>
+              <small
+              *ngIf="
+                searchForm.get('leavingTo')?.touched &&
+                searchForm.get('leavingTo')?.hasError('required')
+              "
+              >Leaving To is required</small
+            >
+            <!-- <input class="form-control"
+              type="text"
+              id="to"
+              formControlName="to"
+              placeholder="Going To"
+            /> -->
+            <br />
+            <br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 ">
+            <h5>Departing On</h5>
+            <input class="form-control" type="date" id="date" placeholder="DD/MM/YYYY" formControlName="departingOn" />
+            <small
+            *ngIf="
+              searchForm.get('departingOn')?.touched &&
+              searchForm.get('departingOn')?.hasError('required')
+            "
+            >Departing On is required</small
+          > <br />
+            <br />
+          </div>
+          </div>
+       
+
+        <!-- {{searchForm.value | json}} -->
+
+        <div align="center">
+          <button style="margin-bottom: 10px;" [disabled]="!searchForm.valid" class="btn btn-primary">Search Buses</button>
+        </div>
+      
+      </form>
+    
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+
+<div *ngIf="busList">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Bus Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Departing Time</th>
+      <th>Bus Fare</th>
+      <th>Seats Available</th>
+      <th>Coach Type</th>
+      <th>Action</th>
+    </thead>
+    <tr *ngFor="let buses of busListDetails;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{buses.busName}}</td>
+      <td>
+        <span *ngFor="let city of cityDetails">
+        <span *ngIf="buses.leavingFrom==city.id "> {{city.city}}</span>
+      </span>
+      </td>
+      <td>
+        <span *ngFor="let city of cityDetails">
+        <span *ngIf="buses.leavingTo==city.id "> {{city.city}}</span>
+      </span>
+      </td>
+      <td>{{buses.deptTime}}</td>
+      <td>{{buses.busFare}}</td>
+      <td>{{buses.busTotalSeats}}</td>
+      <td>{{buses.coachType}}</td>
+      <td><button  class="btn btn-primary" style="background-color:red" routerLink="/bus/list/{{buses.id}}">View Seats</button></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+
+</div>
+
+

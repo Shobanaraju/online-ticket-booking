@@ -1,0 +1,146 @@
+{
+  "bus-list": [
+    {
+      "id": 1,
+      "busName": "Asoka travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "AC",
+      "departingOn": "29-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "200",
+      "leavingTo": "201",
+      "class": "economy"
+    },
+    {
+      "id": 2,
+      "busName": "Green Line travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "AC",
+      "departingOn": "29-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "200",
+      "leavingTo": "201",
+      "class": "business"
+    },
+    {
+      "id": 3,
+      "busName": "KPN Travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "NON-AC",
+      "departingOn": "27-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "201",
+      "leavingTo": "202",
+      "class": "economy"
+    },
+    {
+      "id": 4,
+      "busName": "Gorilla Travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "AC",
+      "departingOn": "27-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "202",
+      "leavingTo": "203",
+      "class": "business"
+    },
+    {
+      "id": 5,
+      "busName": "Parveen Travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "NON-AC",
+      "departingOn": "27-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "203",
+      "leavingTo": "204",
+      "class": "economy"
+    },
+    {
+      "id": 6,
+      "busName": "Garuda Travels",
+      "busFare": "1000",
+      "busTotalSeats": "32",
+      "coachType": "NON-AC",
+      "departingOn": "27-11-2023",
+      "deptTime": "10:00 PM",
+      "leavingFrom": "204",
+      "leavingTo": "205",
+      "class": "business"
+    }
+  ],
+  "cities": [
+    {
+      "id": "200",
+      "city": "Coimbatore"
+    },
+    {
+      "id": "201",
+      "city": "Chennai"
+    },
+    {
+      "id": "202",
+      "city": "Bangalore"
+    },
+    {
+      "id": "203",
+      "city": "Kerala"
+    },
+    {
+      "id": "204",
+      "city": "Ooty"
+    },
+    {
+      "id": "205",
+      "city": "Andhra"
+    }
+  ],
+  "user": [
+    {
+      "fullname": "kaviya",
+      "email": "kaviya@gmail.com",
+      "number": "9878767789",
+      "id": 1
+    },
+    {
+      "fullname": "leo",
+      "email": "leo@gmail.com",
+      "number": "9876564762",
+      "id": 2
+    },
+    {
+      "fullname": "ragavi",
+      "email": "ragavi@gmail.com",
+      "number": "9876564762",
+      "id": 3
+    },
+    {
+      "fullname": "kaviya",
+      "email": "kaviya@gmail.com",
+      "number": "9878767789",
+      "id": 4
+    },
+    {
+      "fullname": "shobana.r@gmail.com",
+      "email": "shobana.r@gmail.com",
+      "number": "9888888888",
+      "id": 5
+    },
+    {
+      "fullname": "shobana@gmail.com",
+      "email": "gokul@gmail.com",
+      "number": "9878767789",
+      "id": 6
+    },
+    {
+      "fullname": "durai",
+      "email": "durai@gmail.com",
+      "number": "9888888888",
+      "id": 7
+    }
+  ]
+}
